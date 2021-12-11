@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="tablink" onclick="openPage('General', this)" id="defaultOpen">General</button>
+      <button class="tablink" onclick="openPage('Device', this)">Device</button>
+      <button class="tablink" onclick="openPage('News', this)">News</button>
+      <button class="tablink" onclick="openPage('Contact', this)">Contact</button>
+      <button class="tablink" onclick="openPage('About', this)">About</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div id="General" class="tabcontent">
+      <ul id="jsGeneralData" class="list-info">
+        <li class="list-info-item">
+          <div class="list-info-item__label">Model</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="Device" class="tabcontent">
+      <ul id="jsDeviceData" class="list-info">
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+        <li class="list-info-item">
+          <div class="list-info-item__label">Label</div>
+          <div class="list-info-item__info">Info</div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+  </main>
+
+  <script>
+    function openPage(pageName, elmnt) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = '#787878';
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

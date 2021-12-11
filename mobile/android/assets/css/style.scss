@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box
+}
+
+/* Set height of body and the document to 100% */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: #fff;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #222;
+  display: none;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar {
+  display: inline-flex;
+  background: #555;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: auto hidden;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.list-info {
+  list-style: none;
+  padding: 0;
+}
+
+.list-info-item {
+  background-color: #fff;
+  padding: 16px;
+  // margin-bottom: 8px;
+  display: flex;
+
+  &__label {
+    font-size: 1em;
+  }
+
+  div {
+    width: 50%;
+    word-break: break-word;
+  }
+
+  &:nth-child(even) {
+    background: #dfdfdf;
+  }
+}
+
+.main {
+  padding-top: 40px;
+}
